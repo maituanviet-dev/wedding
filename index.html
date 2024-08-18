@@ -621,6 +621,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       }
 </script>
 <script>
+   const btn = document.getElementById("btnAudio");
+   btn.click();
+</script>
+<script>
 fetch('/wp-json/wp/v2/comments?post=1171&per_page=100',
     {
      method: 'GET',
@@ -836,7 +840,7 @@ $(document).ready(function(){
  $(':root').css('--bg', '');
 </script>
 <!-- AUDIO -->
-<audio src="https://thiepdientu.com.vn/wp-content/uploads/2024/01/Shane-Filan-Beautiful-In-White-Official-Video-12.mp3" controls="" autoplay="" id="audio">
+<audio src="./folder/ws.mov" controls="" autoplay="true" id="audio">
 
 </audio>
 <!-- END AUDIO --> <!-- FOOTER -->
@@ -845,8 +849,8 @@ $(document).ready(function(){
             <p>Tuấn Việt - Huyền Trang</p>
         </div>
 </footer>
-<button class="toggleAudio">
-        <i class="ri-volume-mute-fill"></i>
+<button class="toggleAudio" id="btnAudio" style="background-color: antiquewhite;">
+        <img src="./folder/volume.png" style="width: 20px; height: 20px;"></i>
 </button>
     <!-- END FOOTER -->
 
