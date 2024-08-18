@@ -144,13 +144,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
     <h1 class="banner-title aos-init aos-animate" data-aos="fade-down" data-aos-duration="3000">SAVE THE DATE</h1>
     <div class="banner-logo aos-init aos-animate" data-aos="fade-in" data-aos-duration="3000">
       <img src="./Mẫu Thiệp Vàng Gold - Thiệp cưới online_files/logo-img.png" alt="" class="logo-img">
-            <span class="groom_letter">V</span>
-      <span class="bride_letter">T</span>
+            <span class="groom_letter">T</span>
+      <span class="bride_letter">V</span>
           </div>
     <div class="banner-name">
-    TUẤN VIỆT<br>
+      HUYỀN TRANG<br>
        &amp;<br>
-HUYỀN TRANG    
+       TUẤN VIỆT   
 </div>
 
 <span class="banner_time" style="color:#bb0f0f; font-weight: 600; font-size: 20px;" id="client-name">Trân trọng kính mời: </span>
@@ -573,7 +573,7 @@ HUYỀN TRANG
             </div>
            
         </div>
-                    <div class="invitation-card"> <img src="./Mẫu Thiệp Vàng Gold - Thiệp cưới online_files/cr2.jpg" alt=""> 
+                    <div class="invitation-card"> <img src="./Mẫu Thiệp Vàng Gold - Thiệp cưới online_files/cr.jpg" alt=""> 
                 <h3 class="card-title uk-margin-remove">TƯ GIA NHÀ TRAI</h3>
                 <address class="uk-margin-remove">
                     <p>Căn 1210, Chung Cư CenterPoint 110 Cầu Giấy, Quan Hoa, Hà Nội</p>
@@ -615,7 +615,11 @@ HUYỀN TRANG
       let params = new URLSearchParams(window.location.search);
       const name = params.get("name");
       const clientName = document.getElementById("client-name");
+      if (name) {
       clientName.textContent += name;
+      } else {
+      clientName.textContent += "Ông/Bà";
+      }
 </script>
 <script>
 fetch('/wp-json/wp/v2/comments?post=1171&per_page=100',
@@ -784,7 +788,7 @@ $(document).ready(function(){
 <!-- END FORM XÁC NHẬN -->
 
 <!-- GỬI QUÀ -->
-<section id="gift" class="section-gift" style="display:block">
+<!-- <section id="gift" class="section-gift" style="display:block">
       <div class="container">
         <p class="subtitle"></p>
         <h2 class="uk-heading-small uk-text-center script-font uk-text-cappercase">GỬI QUÀ ĐẾN CÔ DÂU VÀ CHÚ RỂ</h2>
@@ -813,7 +817,7 @@ $(document).ready(function(){
       </div>
 
 
-    </section>
+    </section> -->
     <!-- END GỬI QUÀ -->
 
 <!-- THANKYOU -->
