@@ -621,10 +621,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       }
 </script>
 <script>
-   const btn = document.getElementById("btnAudio");
-   btn.click();
-</script>
-<script>
 fetch('/wp-json/wp/v2/comments?post=1171&per_page=100',
     {
      method: 'GET',
@@ -850,7 +846,7 @@ $(document).ready(function(){
         </div>
 </footer>
 <button class="toggleAudio" id="btnAudio" style="background-color: antiquewhite;">
-        <img src="./folder/volume.png" style="width: 20px; height: 20px;"></i>
+        <img src="./folder/volume.png" style="width: 20px; height: 20px;"/>
 </button>
     <!-- END FOOTER -->
 
@@ -936,7 +932,15 @@ $(document).ready(function(){
               color: var(--lns-color-body);
               pointer-events: auto;
             }
-          </style><div class="companion-1b6rwsq"></div></div></template></section></div></body><style id="mon-root-filter"></style><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          </style><div class="companion-1b6rwsq"></div></div></template></section></div>
+        
+        <script>
+          const btn = document.getElementById("btnAudio");
+          setTimeout(() => {
+            btn.click();
+          }, 2000)
+       </script>
+        </body><style id="mon-root-filter"></style><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;
         width: 1px;

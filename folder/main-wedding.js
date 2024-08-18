@@ -28,7 +28,9 @@ var swiper1 = new Swiper(".album-slide", {
  
 //AUDIO
 $(".toggleAudio").on("click",function(){
-  $(this).find("i").toggleClass("ri-volume-up-fill")
+    $(this).find("img").attr("src", function(index, attr){
+        return attr === './folder/volume.png' ? './folder/volume-off.png' : './folder/volume.png';
+    });
   audio = $("#audio")
   audio[0].paused ? 
   audio[0].play()
