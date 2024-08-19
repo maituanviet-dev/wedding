@@ -611,11 +611,30 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <!-- TIN NHẮN -->
     <!-- END TIN NHẮN -->
 <script>
+  function decodeIfUnicode(encodedString) {
+    // Regular expression to check for percent-encoded characters
+    const percentEncodedPattern = /%[0-9A-F]{2}/i;
+
+    // Check if the string contains any percent-encoded characters
+    if (percentEncodedPattern.test(encodedString)) {
+        try {
+            // Decode the string and return it
+            return decodeURIComponent(encodedString);
+        } catch (e) {
+            // If decoding fails, return the original string
+            console.error('Decoding failed:', e);
+            return encodedString;
+        }
+    } else {
+        // If no percent-encoded characters are found, return the original string
+        return encodedString;
+    }
+}
       let params = new URLSearchParams(window.location.search);
       const name = params.get("name");
       const clientName = document.getElementById("client-name");
       if (name) {
-      clientName.textContent += name;
+      clientName.textContent += decodeIfUnicode(name);
       } else {
       clientName.textContent += "Ông/Bà";
       }
